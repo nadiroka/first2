@@ -1,4 +1,4 @@
-ï»¿#include<stdio.h>
+#include<stdio.h>
 #include<malloc.h>
 
 int main(void)
@@ -10,20 +10,20 @@ int main(void)
 	int strLen;
 	char ch;
 
-	/* ë¬¸ìì—´ ë™ì í• ë‹¹ ê°¯ìˆ˜ ì…ë ¥ ë°›ê¸° */
-	fputs("ì •ìˆ˜ ì…ë ¥: ", stdout);
+	/* ¹®ÀÚ¿­ µ¿ÀûÇÒ´ç °¹¼ö ÀÔ·Â ¹Ş±â */
+	fputs("Á¤¼ö ÀÔ·Â: ", stdout);
 	scanf("%d", &iNum);
 	ppStr = (char**)malloc(sizeof(char**)*iNum);
 
-	/* ì…ë ¥ë°›ì€ ê°¯ìˆ˜ iNum ë§Œí¼ ë¬¸ìì—´ ë™ì í• ë‹¹ */
+	/* ÀÔ·Â¹ŞÀº °¹¼ö iNum ¸¸Å­ ¹®ÀÚ¿­ µ¿ÀûÇÒ´ç */
 	for (i = 0; i<iNum; i++)
 	{
-		printf("%d ë²ˆì§¸ ë¬¸ìì—´ ìµœëŒ€ ê¸¸ì´ ì…ë ¥ : ", i + 1);
+		printf("%d ¹øÂ° ¹®ÀÚ¿­ ÃÖ´ë ±æÀÌ ÀÔ·Â : ", i + 1);
 		scanf("%d", &strLen);
 		fflush(stdin);
 
 		ppStr[i] = (char*)malloc(sizeof(char)*strLen);
-		printf("%d ë²ˆì§¸ ë¬¸ìì—´ ì…ë ¥ : ", i + 1);
+		printf("%d ¹øÂ° ¹®ÀÚ¿­ ÀÔ·Â : ", i + 1);
 		scanf("%d", strLen);
 
 
@@ -38,8 +38,8 @@ int main(void)
 			}
 			else if (j == strLen - 1)
 			{
-				puts("í• ë‹¹ëœ ë©”ëª¨ë¦¬ê³µê°„ ì´ˆê³¼!");
-				puts("ë©”ëª¨ë¦¬ê³µê°„ì´ˆê³¼ì¢…ë£Œ!");
+				puts("ÇÒ´çµÈ ¸Ş¸ğ¸®°ø°£ ÃÊ°ú!");
+				puts("¸Ş¸ğ¸®°ø°£ÃÊ°úÁ¾·á!");
 				return -1;
 			}
 			ppStr[i][j] = ch;
